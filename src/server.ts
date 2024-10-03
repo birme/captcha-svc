@@ -1,5 +1,6 @@
 import fastify from 'fastify';
 import cors from '@fastify/cors';
+import apiCaptcha from './api_captcha';
 
 async function main() {
   const server = fastify({ ignoreTrailingSlash: true });
@@ -8,6 +9,7 @@ async function main() {
   server.get<{ Reply: { message: string } }>('/', async (_, reply) => {
     reply.send({ message: 'Hello, world!' });
   });
+  server.register(apiCaptcha);
 
   const PORT = process.env.PORT ? Number(process.env.PORT) : 8000;
 
