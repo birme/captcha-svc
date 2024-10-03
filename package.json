@@ -1,0 +1,29 @@
+{
+  "name": "template-svc",
+  "version": "0.1.0",
+  "description": "Template backend",
+  "scripts": {
+    "pretty": "prettier --check --ignore-unknown .",
+    "start": "ts-node -T src/server.ts"
+  },
+  "author": "Jonas Birmé <jonas.birme@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.15.0"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.2.0",
+    "fastify": "4.23.2",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.4",
+    "typescript": "^4.9.5"
+  }
+}
